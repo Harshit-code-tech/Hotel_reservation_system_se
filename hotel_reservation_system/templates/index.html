@@ -3,58 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Reservation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Hotel Reservation System</title>
 </head>
 <body>
-    <h1>Welcome to the Hotel Reservation System</h1>
-
-    <form id="search-form">
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location">
-        <button type="button" onclick="searchHotels()">Search Hotels</button>
-    </form>
-
-    <form id="register-form">
-        <h2>Register</h2>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <button type="button" onclick="register()">Register</button>
-    </form>
-
-    <div id="hotel-results"></div>
-
-    <script>
-        function searchHotels() {
-            const location = document.getElementById('location').value;
-            fetch('/hotels')
-                .then(response => response.json())
-                .then(data => {
-                    const resultsDiv = document.getElementById('hotel-results');
-                    resultsDiv.innerHTML = '';
-                    data.forEach(hotel => {
-                        resultsDiv.innerHTML += `<div>${hotel.name}, ${hotel.location}</div>`;
-                    });
-                });
-        }
-
-        function register() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            fetch('/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, password }),
-            })
-            .then(response => response.json())
-            .then(data => alert(data.message));
-        }
-    </script>
+    <header>
+        <h1>Welcome to the Hotel Reservation System</h1>
+    </header>
+    <div class="container">
+        <h2>Available Hotels</h2>
+        <div id="hotel-list">
+            {% for hotel in hotels %}
+                <div class="hotel-item">
+                    <h2>{{ hotel.name }}</h2>
+                    <p>Location: {{ hotel.location }}</p>
+                    <a href="{{ url_for('routes.get_hotel', hotel_id=hotel._id) }}">View Details</a>
+                </div>
+            {% endfor %}
+        </div>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </div>
 </body>
 </html>
