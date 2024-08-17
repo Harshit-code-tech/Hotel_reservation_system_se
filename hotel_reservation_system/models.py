@@ -1,65 +1,103 @@
-from flask import current_app
+from pymongo import MongoClient
+from config import Config
+from bson.objectid import ObjectId
+
+# MongoDB client initialization
+client = MongoClient(Config.MONGO_URI)
+db = client[Config.MONGO_DB]
 
 class Hotel:
-    def __init__(self, name, location):
-        self.name = name
-        self.location = location
+    @staticmethod
+    def get_all_hotels():
+        return list(db.hotels.find())
+
+    @staticmethod
+    def get_hotel_by_id(hotel_id):
+        return db.hotels.find_one({"_id": ObjectId(hotel_id)})
 
     @staticmethod
     def create_hotel(data):
-        db = current_app.db
         return db.hotels.insert_one(data)
 
     @staticmethod
-    def get_all_hotels():
-        db = current_app.db
-        return db.hotels.find()
+    def delete_hotel(hotel_id):
+        return db.hotels.delete_one({"_id": ObjectId(hotel_id)})
 
 class Room:
-    def __init__(self, room_number, price_per_night, hotel_id):
-        self.room_number = room_number
-        self.price_per_night = price_per_night
-        self.hotel_id = hotel_id
+    @staticmethod
+    def get_room_by_id(room_id):
+        return db.rooms.find_one({"_id": ObjectId(room_id)})
+
+    @staticmethod
+    def get_rooms_by_hotel(hotel_id):
+        return list(db.rooms.find({"hotel_id": ObjectId(hotel_id)}))
+
+    @staticmethod
+    def check_availability(room_id, start_date, end_date):
+        reservation = db.reservations.find_one({
+            "room_id": ObjectId(room_id),
+            "check_in": {"$lt": end_date},
+            "check_out": {"$gt": start_date}
+        })
+        return reservation is None
 
     @staticmethod
     def create_room(data):
-        db = current_app.db
         return db.rooms.insert_one(data)
 
     @staticmethod
-    def check_availability(room_id):
-        db = current_app.db
-        return db.rooms.find_one({'_id': room_id, 'is_available': True})
+    def delete_room(room_id):
+        return db.rooms.delete_one({"_id": ObjectId(room_id)})
 
 class Reservation:
-    def __init__(self, room_id, customer_name, check_in, check_out):
-        self.room_id = room_id
-        self.customer_name = customer_name
-        self.check_in = check_in
-        self.check_out = check_out
-
     @staticmethod
     def create_reservation(data):
-        db = current_app.db
         return db.reservations.insert_one(data)
 
     @staticmethod
-    def get_reservations_by_customer(customer_id):
-        db = current_app.db
-        return db.reservations.find({'customer_id': customer_id})
-
-class Customer:
-    def __init__(self, name, email, phone_number):
-        self.name = name
-        self.email = email
-        self.phone_number = phone_number
+    def get_reservation_by_id(reservation_id):
+        return db.reservations.find_one({"_id": ObjectId(reservation_id)})
 
     @staticmethod
+    def get_reservations_by_customer(customer_id):
+        return list(db.reservations.find({"customer_id": ObjectId(customer_id)}))
+
+    @staticmethod
+    def cancel_reservation(reservation_id):
+        return db.reservations.update_one(
+            {"_id": ObjectId(reservation_id)},
+            {"$set": {"status": "Cancelled"}}
+        )
+
+    @staticmethod
+    def delete_reservation(reservation_id):
+        return db.reservations.delete_one({"_id": ObjectId(reservation_id)})
+
+class Customer:
+    @staticmethod
     def register_customer(data):
-        db = current_app.db
         return db.customers.insert_one(data)
 
     @staticmethod
-    def login(email):
-        db = current_app.db
-        return db.customers.find_one({'email': email})
+    def login(email, password):
+        customer = db.customers.find_one({"email": email})
+        if customer and customer['password'] == password:
+            return customer
+        return None
+
+    @staticmethod
+    def delete_customer(customer_id):
+        return db.customers.delete_one({"_id": ObjectId(customer_id)})
+
+class Payment:
+    @staticmethod
+    def process_payment(data):
+        return db.payments.insert_one(data)
+
+    @staticmethod
+    def get_payment_by_reservation(reservation_id):
+        return db.payments.find_one({"reservation_id": ObjectId(reservation_id)})
+
+    @staticmethod
+    def delete_payment(payment_id):
+        return db.payments.delete_one({"_id": ObjectId(payment_id)})
