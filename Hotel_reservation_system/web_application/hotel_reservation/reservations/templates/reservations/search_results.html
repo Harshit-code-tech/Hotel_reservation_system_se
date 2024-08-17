@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Search Results</title>
+</head>
+<body>
+    <h1>Hotels in {{ location }}</h1>
+    <ul>
+        {% for hotel in hotels %}
+            <li>{{ hotel.name }} - {{ hotel.location }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

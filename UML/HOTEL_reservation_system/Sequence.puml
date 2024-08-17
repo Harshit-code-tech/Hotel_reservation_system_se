@@ -1,0 +1,44 @@
+@startuml
+actor Customer
+participant "Hotel Database" as DB
+participant "Hotel Manager" as Manager
+participant "Admin" as Admin
+
+Customer -> Admin: Account Registration
+Admin -> Customer: Registration Success
+
+Customer -> Admin: Account Login
+Admin -> Customer: Login Success
+
+
+
+Customer -> DB: Hotel Search
+DB --> Customer: List of Hotels
+
+Customer -> DB: Hotel Selection
+DB -> Manager: Room Availability Check
+alt Room is available
+    Manager --> DB: true
+    DB -> Manager: Reservation Creation
+    Manager --> DB: Reservation details
+    DB --> Customer: Display Reservation Details
+    Customer -> Admin: Payment Initiation
+    Admin --> DB: Payment Confirmation
+    DB --> Customer: Display Confirmation
+else Room is not available
+    Manager --> DB: false
+    DB --> Customer: Room Unavailable
+    alt Suggest Alternative Room or Dates
+        DB -> Manager: Check Other Dates or Rooms
+        Manager --> DB: Alternative Options
+        DB --> Customer: Offer Alternative Options
+    end
+end
+
+alt Payment Fails
+    Admin --> DB: Payment Failed
+    DB --> Customer: Display Payment Error
+end
+Customer -> Admin: Account Logout
+Admin -> Customer: Logout Success
+@enduml

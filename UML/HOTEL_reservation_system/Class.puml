@@ -1,0 +1,119 @@
+@startuml
+class Hotel {
+  +hotel_id: Primary Key
+  +Name
+  +Location
+  +Rooms_List
+
+  +Hotel Search()
+  +Reservation Creation()
+  +Room Addition()
+  +Room Removal()
+  +View_All_Reservations()
+}
+
+class Room {
+  +room_id: Primary Key
+  +Room_Number
+  +Price_Per_Night
+
+  +Room Availability()
+}
+
+class Customer {
+  +customer_id: Primary Key
+  +Name
+  +Email_Address
+  +Phone_Number
+
+  +Account Registration()
+  +Account Login()
+  +Account Logout()
+  +Hotel Search()
+  +Reservation Creation()
+  +View_Booking_History()
+}
+
+class Reservation {
+  +reservation_id: Primary Key
+  +Reserved_Room
+  +Customer_Details
+  +Reservation_Dates
+  +Reservation_Status(Pending, Confirmed, Cancelled)
+
+  +Payment Initiation()
+  +Reservation Cancellation()
+  +Check_Room_Availability(Room: Room, Dates: DateRange)
+  +View_Reservation_Details()
+}
+
+class Payment {
+  +payment_id: Primary Key
+  +Amount paid
+  +Date of payment
+
+  +Payment Processing()
+}
+
+class Admin {
+  +admin_id: Primary Key
+
+  +Payment Management()
+  +Customer Account Management()
+  +Login()
+  +Logout()
+}
+
+class Manager {
+  +manager_id: Primary Key
+
+  +Reservation Handling()
+  +Room Management()
+  +Report Generation()
+  +Complaint Handling()
+  +Notification Sending()
+  +Reservation Update()
+}
+
+class SearchCriteria {
+  +Location
+  +Check_In_Date
+  +Check_Out_Date
+  +Number_of_Guests
+}
+
+class DateRange {
+  +Start_Date
+  +End_Date
+}
+
+class Report {
+  +report_id: Primary Key
+  +Content
+  +Generate_Report()
+}
+
+enum ReservationStatus {
+  Pending
+  Confirmed
+  Cancelled
+}
+
+Admin "1" -- "*" Hotel
+Hotel "1" -- "*" Room
+Customer "1" -- "*" Reservation
+Reservation "1" -- "1" Room
+Reservation "1" -- "1" Customer
+Reservation "1" -- "1" Payment
+Reservation "1" -- "1" DateRange
+Reservation "1" -- "1" ReservationStatus
+Admin -- Payment
+Admin -- Customer
+Manager "1" -- "*" Hotel
+Manager -- Reservation
+Manager -- Report
+Manager -- Customer
+Customer "1" -- "*" Payment
+Customer "1" -- "1" SearchCriteria
+Hotel "1" -- "1" SearchCriteria
+@enduml
