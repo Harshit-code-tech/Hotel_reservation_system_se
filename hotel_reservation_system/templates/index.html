@@ -7,7 +7,54 @@
 </head>
 <body>
     <h1>Welcome to the Hotel Reservation System</h1>
-    <!-- Add your form or other HTML here -->
 
+    <form id="search-form">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+        <button type="button" onclick="searchHotels()">Search Hotels</button>
+    </form>
+
+    <form id="register-form">
+        <h2>Register</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <button type="button" onclick="register()">Register</button>
+    </form>
+
+    <div id="hotel-results"></div>
+
+    <script>
+        function searchHotels() {
+            const location = document.getElementById('location').value;
+            fetch('/hotels')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('hotel-results');
+                    resultsDiv.innerHTML = '';
+                    data.forEach(hotel => {
+                        resultsDiv.innerHTML += `<div>${hotel.name}, ${hotel.location}</div>`;
+                    });
+                });
+        }
+
+        function register() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password }),
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message));
+        }
+    </script>
 </body>
 </html>
