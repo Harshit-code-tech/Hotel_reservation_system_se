@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'reservations',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,9 @@ WSGI_APPLICATION = 'hotel_reservation.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'hotel_reservation_db',
+        'NAME': 'Hotel_reservation_system',  # Replace with your MongoDB database name
+        'HOST': 'localhost',
+        'PORT': 27017,
     }
 }
 
