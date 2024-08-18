@@ -1,0 +1,3 @@
+pip install Flask-Mail
+pip install PyJWT
+pip install python-dotenv

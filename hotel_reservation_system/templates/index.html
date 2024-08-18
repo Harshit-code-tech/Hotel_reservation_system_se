@@ -8,12 +8,16 @@
 {% block content %}
 <h2>Available Hotels</h2>
 <div id="hotel-list">
-    {% for hotel in hotels %}
-        <div class="hotel-item">
-            <h2>{{ hotel.name }}</h2>
-            <p>Location: {{ hotel.location }}</p>
-            <a href="{{ url_for('routes.get_hotel', hotel_id=hotel._id) }}">View Details</a>
-        </div>
-    {% endfor %}
+    {% if hotels %}
+        {% for hotel in hotels %}
+            <div class="hotel-item">
+                <h2>{{ hotel.name }}</h2>
+                <p>Location: {{ hotel.location }}</p>
+                <a href="{{ url_for('routes.get_hotel', hotel_id=hotel._id) }}">View Details</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No hotels available at the moment. Please check back later.</p>
+    {% endif %}
 </div>
 {% endblock %}

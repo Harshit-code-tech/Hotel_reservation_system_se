@@ -29,6 +29,18 @@ header {
     position: relative; /* Position relative for proper z-index handling */
 }
 
+/* Navigation Styles */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* Main content area */
 .container {
     max-width: 800px; /* Set max-width for better responsiveness */
@@ -42,11 +54,13 @@ header {
     margin-bottom: 60px; /* Provide space for the footer */
 }
 
+/* Fade-in Animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* Form Styles */
 form {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -56,6 +70,7 @@ form {
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
+/* Input and Button Styles */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -180,7 +195,7 @@ header .star {
     display: none;
 }
 
-/*error msg*/
+/* Error Message Styles */
 .error-message {
     color: red;
     font-size: 14px;
@@ -188,17 +203,7 @@ header .star {
     display: none; /* Initially hidden */
 }
 
-input[type="submit"] {
-    cursor: pointer;
-    /* Add transition for better visual feedback */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 15px rgba(0, 91, 255, 0.5);
-}
-
+/* Password Input Validation */
 input[type="password"] {
     position: relative;
 }
@@ -217,4 +222,3 @@ input[type="password"]::after {
 input[type="password"].invalid::after {
     visibility: visible;
 }
-

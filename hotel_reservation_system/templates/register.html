@@ -2,45 +2,73 @@
 
 {% block title %}Register{% endblock %}
 
-{% block header %}Hotel Reservation System{% endblock %}
-
 {% block content %}
 <div class="form-container">
-    <h2>Register an Account</h2>
-    <form id="register-form">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Register">
-        <div id="register-error" class="error-message"></div>
+    <h2>Register</h2>
+    <form id="register-form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Register</button>
     </form>
+
+    <div id="register-error" class="error-message"></div>
     <p>Already have an account? <a href="{{ url_for('routes.login') }}">Login here</a>.</p>
 </div>
 
 <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = document.querySelector('[name="email"]').value;
+        var password = document.querySelector('[name="password"]').value;
+
+        if (!validateEmail(email)) {
+            showError('login-error', 'Please enter a valid email address.');
+            return;
+        }
+
+        if (password.length < 8) {
+            showError('login-error', 'Password must be at least 8 characters long.');
+            return;
+        }
+
+        this.submit();
+    });
+
     document.getElementById('register-form').addEventListener('submit', function(e) {
         e.preventDefault();
-        var formData = new FormData(this);
+        var email = document.querySelector('[name="email"]').value;
+        var password = document.querySelector('[name="password"]').value;
 
-        fetch('{{ url_for("routes.register") }}', {
-            method: 'POST',
-            body: formData
-        }).then(response => response.json())
-          .then(data => {
-              if (data.success) {
-                  window.location.href = data.redirect;
-              } else {
-                  var errorDiv = document.getElementById('register-error');
-                  errorDiv.innerText = data.message;
-                  errorDiv.style.display = 'block';  // Show error message
-              }
-          })
-          .catch(error => {
-              console.error('Error:', error);
-              var errorDiv = document.getElementById('register-error');
-              errorDiv.innerText = 'An unexpected error occurred. Please try again.';
-              errorDiv.style.display = 'block';  // Show error message
-          });
+        if (!validateEmail(email)) {
+            showError('register-error', 'Please enter a valid email address.');
+            return;
+        }
+
+        if (password.length < 8) {
+            showError('register-error', 'Password must be at least 8 characters long.');
+            return;
+        }
+
+        this.submit();
     });
+
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function showError(elementId, message) {
+        var errorDiv = document.getElementById(elementId);
+        errorDiv.innerText = message;
+        errorDiv.style.display = 'block';
+    }
 </script>
+
 {% endblock %}

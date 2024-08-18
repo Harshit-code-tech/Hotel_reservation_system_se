@@ -2,23 +2,36 @@
 
 {% block title %}Login{% endblock %}
 
-{% block header %}Hotel Reservation System{% endblock %}
-
 {% block content %}
-<div class="form-container">
-    <h2>Login to Your Account</h2>
-    <form id="login-form">
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Login">
-        <div id="login-error" class="error-message"></div>
-    </form>
-    <p>Don't have an account? <a href="{{ url_for('routes.register') }}">Register here</a>.</p>
-</div>
+<h2>Login</h2>
+<form method="post" action="{{ url_for('routes.login') }}">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit" value="Login">
+</form>
+<p>Don't have an account? <a href="{{ url_for('routes.register') }}">Register here</a>.</p>
+<p><a href="{{ url_for('routes.forgot_password') }}">Forgot Password?</a></p>
+{% endblock %}
 
 <script>
     document.getElementById('login-form').addEventListener('submit', function(e) {
         e.preventDefault();
+
+        var email = document.getElementsByName('email')[0].value;
+        var password = document.getElementsByName('password')[0].value;
+
+        if (!validateEmail(email)) {
+            showError('login-error', 'Please enter a valid email address.');
+            return;
+        }
+
+        if (password.length < 8) {
+            showError('login-error', 'Password must be at least 8 characters long.');
+            return;
+        }
+
         var formData = new FormData(this);
 
         fetch('{{ url_for("routes.login") }}', {
@@ -29,17 +42,23 @@
               if (data.success) {
                   window.location.href = data.redirect;
               } else {
-                  var errorDiv = document.getElementById('login-error');
-                  errorDiv.innerText = data.message;
-                  errorDiv.style.display = 'block';  // Show error message
+                  showError('login-error', data.message);
               }
           })
           .catch(error => {
               console.error('Error:', error);
-              var errorDiv = document.getElementById('login-error');
-              errorDiv.innerText = 'An unexpected error occurred. Please try again.';
-              errorDiv.style.display = 'block';  // Show error message
+              showError('login-error', 'An unexpected error occurred. Please try again.');
           });
     });
+
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function showError(elementId, message) {
+        var errorDiv = document.getElementById(elementId);
+        errorDiv.innerText = message;
+        errorDiv.style.display = 'block';
+    }
 </script>
-{% endblock %}

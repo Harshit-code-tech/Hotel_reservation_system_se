@@ -1,10 +1,27 @@
-# routes.py
 from flask import Blueprint, request, jsonify, render_template, current_app, redirect, url_for, session, flash
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 import re
+import jwt
+import datetime
+from flask_mail import Mail, Message
+
 bp = Blueprint('routes', __name__)
+
+def generate_reset_token(email):
+    expiration = datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+    token = jwt.encode({'email': email, 'exp': expiration}, current_app.config['SECRET_KEY'], algorithm='HS256')
+    return token
+
+def verify_reset_token(token):
+    try:
+        data = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=['HS256'])
+        return data['email']
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidTokenError:
+        return None
 
 def login_required(f):
     @wraps(f)
@@ -13,6 +30,7 @@ def login_required(f):
             flash("You need to log in first.", "warning")
             return redirect(url_for('routes.login'))
         return f(*args, **kwargs)
+
     return decorated_function
 
 def validate_password(password):
@@ -28,6 +46,49 @@ def validate_password(password):
         return "Password must contain at least one special character."
     return None
 
+@bp.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    if request.method == 'POST':
+        email = request.form['email']
+        token = generate_reset_token(email)
+        msg = Message('Password Reset Request', sender=current_app.config['MAIL_USERNAME'], recipients=[email])
+        msg.body = f'''To reset your password, visit the following link:
+        {url_for('routes.reset_password', token=token, _external=True)}
+        If you did not make this request then simply ignore this email and no changes will be made.
+        '''
+
+        try:
+            mail = Mail(current_app)
+            mail.send(msg)
+            flash('An email has been sent with instructions to reset your password.', 'info')
+        except Exception as e:
+            flash('There was an issue sending the email. Please try again later.', 'danger')
+            print(f"Error: {e}")
+        return redirect(url_for('routes.login'))
+    return render_template('forgot_password.html')
+
+@bp.route('/reset-password/<token>', methods=['GET', 'POST'])
+def reset_password(token):
+    email = verify_reset_token(token)
+    if not email:
+        flash('The link is invalid or has expired.', 'warning')
+        return redirect(url_for('routes.forgot_password'))
+
+    if request.method == 'POST':
+        password = request.form.get('password')
+        password_error = validate_password(password)
+        if password_error:
+            flash(password_error, 'warning')
+            return render_template('reset_password.html', token=token)
+
+        db = current_app.db
+        hashed_password = generate_password_hash(password)
+        db.users.update_one({'email': email}, {'$set': {'password': hashed_password}})
+        flash('Your password has been updated.', 'info')
+        return redirect(url_for('routes.login'))
+
+    return render_template('reset_password.html', token=token)
+
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -37,9 +98,18 @@ def login():
         if user and check_password_hash(user['password'], data['password']):
             session['user_id'] = str(user['_id'])
             session['user_name'] = user['name']
-            return jsonify({'success': True, 'redirect': url_for('routes.index')})
-        return jsonify({'success': False, 'message': 'Invalid credentials. Please try again.'})
+            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
+                return jsonify({'success': True, 'redirect': url_for('routes.index')})
+            else:
+                return redirect(url_for('routes.index'))
+        else:
+            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
+                return jsonify({'success': False, 'message': 'Invalid credentials. Please try again.'})
+            else:
+                flash('Invalid credentials. Please try again.', 'danger')
+                return render_template('login.html')
     return render_template('login.html')
+
 
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
@@ -48,18 +118,37 @@ def register():
         db = current_app.db
         existing_user = db.users.find_one({'email': data['email']})
         password_error = validate_password(data['password'])
+
         if existing_user:
-            return jsonify({'success': False, 'message': 'User already exists with this email.'})
+            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
+                return jsonify({'success': False, 'message': 'User already exists with this email.'})
+            else:
+                flash('User already exists with this email.', 'danger')
+                return render_template('register.html')
+
         if password_error:
-            return jsonify({'success': False, 'message': password_error})
+            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
+                return jsonify({'success': False, 'message': password_error})
+            else:
+                flash(password_error, 'danger')
+                return render_template('register.html')
+
         hashed_password = generate_password_hash(data['password'])
         db.users.insert_one({
             'name': data['name'],
             'email': data['email'],
             'password': hashed_password
         })
-        return jsonify({'success': True, 'redirect': url_for('routes.login')})
+
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
+            return jsonify({'success': True, 'redirect': url_for('routes.login')})
+        else:
+            flash('Registration successful! You can now log in.', 'success')
+            return redirect(url_for('routes.login'))
+
     return render_template('register.html')
+
+
 @bp.route('/logout')
 @login_required
 def logout():
@@ -79,6 +168,7 @@ def index():
         return render_template('error.html'), 500
 
 @bp.route('/hotel/<string:hotel_id>')
+@login_required
 def get_hotel(hotel_id):
     try:
         db = current_app.db
