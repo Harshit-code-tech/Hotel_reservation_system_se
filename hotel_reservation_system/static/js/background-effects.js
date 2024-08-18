@@ -1,4 +1,3 @@
-// background-effects.js
 document.addEventListener('DOMContentLoaded', function() {
     // Create and append the star field container
     const numStars = 100; // Number of stars to generate
@@ -21,4 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Append all stars at once
     starField.appendChild(fragment);
+
+    // Ensure the star field container covers the entire viewport
+    const starFieldStyle = document.createElement('style');
+    starFieldStyle.textContent = `
+        .star-field {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1; /* Ensure stars are behind other content */
+        }
+    `;
+    document.head.appendChild(starFieldStyle);
 });
