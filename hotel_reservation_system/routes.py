@@ -1,3 +1,4 @@
+# routes.py
 from flask import Blueprint, request, jsonify, render_template, current_app, redirect, url_for
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -16,6 +17,39 @@ def login_required(f):
     return decorated_function
 
 
+@bp.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        data = request.form
+        db = current_app.db
+        user = db.users.find_one({'email': data['email']})
+        if user and check_password_hash(user['password'], data['password']):
+            current_app.config['LOGGED_IN_USER'] = user['email']
+            return redirect(url_for('routes.index'))
+        elif not user:
+            return redirect(url_for('routes.register'))
+        return "Invalid credentials", 401
+    return render_template('login.html')
+
+
+@bp.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        data = request.form
+        db = current_app.db
+        if not db.users.find_one({'email': data['email']}):
+            hashed_password = generate_password_hash(data['password'])
+            db.users.insert_one({
+                'name': data['name'],
+                'email': data['email'],
+                'password': hashed_password
+            })
+            return redirect(url_for('routes.login'))
+        return "User already exists", 400
+    return render_template('register.html')
+
+
+@login_required
 @bp.route('/')
 def index():
     try:
@@ -26,6 +60,7 @@ def index():
         return jsonify({'error': str(e)}), 500
 
 
+@login_required
 @bp.route('/hotel/<string:hotel_id>')
 def get_hotel(hotel_id):
     try:
@@ -40,32 +75,7 @@ def get_hotel(hotel_id):
         return jsonify({'error': str(e)}), 500
 
 
-@bp.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        data = request.form
-        db = current_app.db
-        hashed_password = generate_password_hash(data['password'])
-        db.users.insert_one({
-            'name': data['name'],
-            'email': data['email'],
-            'password': hashed_password
-        })
-        return redirect(url_for('routes.login'))
-    return render_template('register.html')
 
-
-@bp.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        data = request.form
-        db = current_app.db
-        user = db.users.find_one({'email': data['email']})
-        if user and check_password_hash(user['password'], data['password']):
-            current_app.config['LOGGED_IN_USER'] = user['email']
-            return redirect(url_for('routes.index'))
-        return "Invalid credentials", 401
-    return render_template('login.html')
 
 
 @bp.route('/logout')

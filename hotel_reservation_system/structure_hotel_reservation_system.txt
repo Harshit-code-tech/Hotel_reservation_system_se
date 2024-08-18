@@ -1,0 +1,25 @@
+├── hotel_reservation_system/
+    ├── routes.py
+    ├── app.py
+    ├── models.py
+    ├── config.py
+    ├── static/
+        ├── css/
+            ├── style.css
+        ├── js/
+            ├── background-effects.js
+            ├── script.js
+    ├── __pycache__/
+        ├── routes.cpython-312.pyc
+        ├── config.cpython-312.pyc
+        ├── app.cpython-312.pyc
+        ├── models.cpython-312.pyc
+    ├── templates/
+        ├── hotel_details.html
+        ├── base.html
+        ├── login.html
+        ├── hotel_list.html
+        ├── index.html
+        ├── reservation.html
+        ├── register.html
+    ├── instance/

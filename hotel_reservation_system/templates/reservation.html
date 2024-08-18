@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Make a Reservation</title>
-</head>
-<body>
-    <header>
-        <h1>Make a Reservation</h1>
-        <a href="{{ url_for('routes.index') }}">Back to Hotel List</a>
-    </header>
-    <div class="container">
-        <form action="{{ url_for('routes.add_reservation') }}" method="POST">
-            <label for="room_id">Room ID:</label>
-            <input type="text" id="room_id" name="room_id" required>
+<!--reservation.html-->
+{% extends 'base.html' %}
 
-            <label for="customer_name">Customer Name:</label>
-            <input type="text" id="customer_name" name="customer_name" required>
+{% block title %}Make a Reservation{% endblock %}
 
-            <label for="check_in">Check-in Date:</label>
-            <input type="date" id="check_in" name="check_in" required>
+{% block header %}Make a Reservation{% endblock %}
 
-            <label for="check_out">Check-out Date:</label>
-            <input type="date" id="check_out" name="check_out" required>
+{% block content %}
+<form action="{{ url_for('routes.add_reservation') }}" method="POST">
+    <label for="room_id">Room ID:</label>
+    <input type="text" id="room_id" name="room_id" required>
 
-            <input type="submit" value="Submit Reservation">
-        </form>
-    </div>
-</body>
-</html>
+    <label for="customer_name">Customer Name:</label>
+    <input type="text" id="customer_name" name="customer_name" required>
+
+    <label for="check_in">Check-in Date:</label>
+    <input type="date" id="check_in" name="check_in" required>
+
+    <label for="check_out">Check-out Date:</label>
+    <input type="date" id="check_out" name="check_out" required>
+
+    <input type="submit" value="Submit Reservation">
+</form>
+{% endblock %}

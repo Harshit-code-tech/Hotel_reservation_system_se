@@ -1,0 +1,26 @@
+[
+    {
+        "_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bcd" },
+        "name": "Ocean View Hotel",
+        "location": "Miami, FL",
+        "rating": 4.5,
+        "description": "A luxurious hotel with stunning ocean views and modern amenities.",
+        "price_per_night": 250
+    },
+    {
+        "_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bce" },
+        "name": "Mountain Retreat",
+        "location": "Aspen, CO",
+        "rating": 4.8,
+        "description": "A cozy retreat in the mountains with excellent skiing and hiking options.",
+        "price_per_night": 300
+    },
+    {
+        "_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bcf" },
+        "name": "City Center Inn",
+        "location": "New York, NY",
+        "rating": 4.0,
+        "description": "A modern hotel in the heart of the city with convenient access to attractions.",
+        "price_per_night": 200
+    }
+]

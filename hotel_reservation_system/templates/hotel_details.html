@@ -1,35 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>{{ hotel.name }}</title>
-</head>
-<body>
-    <header>
-        <h1>{{ hotel.name }}</h1>
-        <a href="{{ url_for('routes.index') }}">Back to Hotel List</a>
-    </header>
-    <div class="container">
-        <h2>Details</h2>
-        <p><strong>Location:</strong> {{ hotel.location }}</p>
-        <p><strong>Description:</strong> {{ hotel.description }}</p>
+<!--hotel_details.html-->
+{% extends 'base.html' %}
 
-        <h3>Available Rooms</h3>
-        {% if rooms %}
-            <ul>
-                {% for room in rooms %}
-                    <li>
-                        <p><strong>Room Number:</strong> {{ room.number }}</p>
-                        <p><strong>Price per Night:</strong> ${{ room.price_per_night }}</p>
-                        <p><strong>Status:</strong> {{ 'Available' if room.is_available else 'Not Available' }}</p>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No rooms available at the moment.</p>
-        {% endif %}
-    </div>
-</body>
-</html>
+{% block title %}{{ hotel.name }}{% endblock %}
+
+{% block header %}{{ hotel.name }}{% endblock %}
+
+{% block content %}
+<h2>Details</h2>
+<p><strong>Location:</strong> {{ hotel.location }}</p>
+<p><strong>Description:</strong> {{ hotel.description }}</p>
+
+<h3>Available Rooms</h3>
+{% if rooms %}
+    <ul>
+        {% for room in rooms %}
+            <li>
+                <p><strong>Room Number:</strong> {{ room.number }}</p>
+                <p><strong>Price per Night:</strong> ${{ room.price_per_night }}</p>
+                <p><strong>Status:</strong> {{ 'Available' if room.is_available else 'Not Available' }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No rooms available at the moment.</p>
+{% endif %}
+{% endblock %}

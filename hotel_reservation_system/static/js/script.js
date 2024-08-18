@@ -1,3 +1,4 @@
+// script.js
 document.addEventListener("DOMContentLoaded", function() {
     // Select the form element
     const form = document.querySelector("form");

@@ -1,0 +1,26 @@
+[
+    {
+        "_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bd0" },
+        "hotel_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bcd" },
+        "room_type": "Deluxe Suite",
+        "price_per_night": 350,
+        "availability": true,
+        "description": "Spacious suite with ocean views and a private balcony."
+    },
+    {
+        "_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bd1" },
+        "hotel_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bce" },
+        "room_type": "Standard Room",
+        "price_per_night": 250,
+        "availability": true,
+        "description": "Comfortable room with mountain views and modern amenities."
+    },
+    {
+        "_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bd2" },
+        "hotel_id": { "$oid": "64f55c7c8b4d8f5e3e4a5bcf" },
+        "room_type": "Executive Room",
+        "price_per_night": 220,
+        "availability": false,
+        "description": "Elegant room with city views and high-end furnishings."
+    }
+]
