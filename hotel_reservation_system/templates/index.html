@@ -1,4 +1,3 @@
-<!--index.html-->
 {% extends 'base.html' %}
 
 {% block title %}Hotel Reservation System{% endblock %}
@@ -13,6 +12,8 @@
             <div class="hotel-item">
                 <h2>{{ hotel.name }}</h2>
                 <p>Location: {{ hotel.location }}</p>
+                <p>Rating: {{ hotel.rating }}</p>
+                <p>Price per Night: ${{ hotel.price_per_night }}</p>
                 <a href="{{ url_for('routes.get_hotel', hotel_id=hotel._id) }}">View Details</a>
             </div>
         {% endfor %}

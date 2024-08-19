@@ -1,0 +1,632 @@
+[
+    {
+        "_id": "fae500f9-adf0-4c97-9a42-df53e4c165d9",
+        "hotel_id": "5b867a0a-93a7-4846-ab49-e060110cf996",
+        "room_type": "Standard Room",
+        "price_per_night": 357,
+        "availability": true,
+        "description": "Cold identify today forward.",
+        "bed_type": "King Bed",
+        "max_occupancy": 3,
+        "amenities": [
+            "Balcony",
+            "Mini Bar",
+            "Jacuzzi"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Available",
+        "size": "23 sqm"
+    },
+    {
+        "_id": "6ddb2abd-cc56-4aa6-9ae6-f0e6c2981e06",
+        "hotel_id": "86cf2412-fc07-475d-83a3-834562a5df83",
+        "room_type": "Standard Room",
+        "price_per_night": 230,
+        "availability": true,
+        "description": "See hundred bad certain under indicate.",
+        "bed_type": "Double Bed",
+        "max_occupancy": 4,
+        "amenities": [
+            "Mini Bar",
+            "Balcony",
+            "Flat Screen TV"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "58 sqm"
+    },
+    {
+        "_id": "0b9c3072-9d26-4374-8bab-bb11e1d200d9",
+        "hotel_id": "93d2ccd7-7412-449b-bd9c-92793c2229eb",
+        "room_type": "Executive Room",
+        "price_per_night": 268,
+        "availability": true,
+        "description": "Sort strong decide need during.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Jacuzzi",
+            "Mini Bar",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "54 sqm"
+    },
+    {
+        "_id": "475cc851-fc93-4495-aea6-56675a58d3d4",
+        "hotel_id": "678c1411-184b-4c54-9675-1f15bb0fd4ab",
+        "room_type": "Standard Room",
+        "price_per_night": 354,
+        "availability": false,
+        "description": "System firm short Mr.",
+        "bed_type": "King Bed",
+        "max_occupancy": 3,
+        "amenities": [
+            "Flat Screen TV",
+            "Air Conditioning",
+            "Mini Bar"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Available",
+        "size": "29 sqm"
+    },
+    {
+        "_id": "54c06c89-2504-4cbe-a74e-adb814ba3c73",
+        "hotel_id": "75f9f594-2875-47db-af9f-e763ddfa2e42",
+        "room_type": "Standard Room",
+        "price_per_night": 448,
+        "availability": true,
+        "description": "Think find also personal low.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Air Conditioning",
+            "Flat Screen TV",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "38 sqm"
+    },
+    {
+        "_id": "416f6ebe-65c9-48c7-afc2-403ddce61c79",
+        "hotel_id": "afcb240f-5d7b-4748-8b94-9f28cde7f0b4",
+        "room_type": "Standard Room",
+        "price_per_night": 441,
+        "availability": true,
+        "description": "Ability act building clear can.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 4,
+        "amenities": [
+            "Mini Bar",
+            "Flat Screen TV",
+            "Jacuzzi"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "48 sqm"
+    },
+    {
+        "_id": "528fc202-d82c-4d11-99fd-34a3cfed4a4b",
+        "hotel_id": "86cf2412-fc07-475d-83a3-834562a5df83",
+        "room_type": "Standard Room",
+        "price_per_night": 463,
+        "availability": true,
+        "description": "Man last street sign teach benefit week.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 3,
+        "amenities": [
+            "Air Conditioning",
+            "Jacuzzi",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Available",
+        "size": "58 sqm"
+    },
+    {
+        "_id": "09b2707a-d622-4a28-af98-33e089850f3d",
+        "hotel_id": "75f9f594-2875-47db-af9f-e763ddfa2e42",
+        "room_type": "Executive Room",
+        "price_per_night": 338,
+        "availability": true,
+        "description": "Far once price result.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 3,
+        "amenities": [
+            "Jacuzzi",
+            "Flat Screen TV",
+            "Air Conditioning"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "60 sqm"
+    },
+    {
+        "_id": "01bab1b0-2616-4b19-a324-b77754d828b5",
+        "hotel_id": "93d2ccd7-7412-449b-bd9c-92793c2229eb",
+        "room_type": "Standard Room",
+        "price_per_night": 484,
+        "availability": false,
+        "description": "Attention herself can class conference worker.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 2,
+        "amenities": [
+            "Flat Screen TV",
+            "Balcony",
+            "Jacuzzi"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "56 sqm"
+    },
+    {
+        "_id": "e366d16d-8411-4119-9d51-8f011dc4c70e",
+        "hotel_id": "5f8089e9-516c-4d81-9d07-4a79e8ac06b3",
+        "room_type": "Standard Room",
+        "price_per_night": 107,
+        "availability": false,
+        "description": "Rule dinner production start reflect young.",
+        "bed_type": "Double Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Jacuzzi",
+            "Balcony",
+            "Air Conditioning"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "24 sqm"
+    },
+    {
+        "_id": "e94c8e63-cf77-4f5f-9a5a-886aa2e4760f",
+        "hotel_id": "ea5adf95-8fda-422d-b553-c0829180c6a9",
+        "room_type": "Executive Room",
+        "price_per_night": 366,
+        "availability": false,
+        "description": "Face specific tell.",
+        "bed_type": "King Bed",
+        "max_occupancy": 2,
+        "amenities": [
+            "Air Conditioning",
+            "Mini Bar",
+            "Jacuzzi"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "58 sqm"
+    },
+    {
+        "_id": "a252ad22-880f-46ae-b033-c17ff16c3d1c",
+        "hotel_id": "5b867a0a-93a7-4846-ab49-e060110cf996",
+        "room_type": "Suite",
+        "price_per_night": 218,
+        "availability": false,
+        "description": "Free remain gun water computer.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 4,
+        "amenities": [
+            "Jacuzzi",
+            "Balcony",
+            "Mini Bar"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "52 sqm"
+    },
+    {
+        "_id": "3dc28a19-9a8b-4984-8abd-62be22446fbd",
+        "hotel_id": "678c1411-184b-4c54-9675-1f15bb0fd4ab",
+        "room_type": "Deluxe Suite",
+        "price_per_night": 482,
+        "availability": false,
+        "description": "Leg list rest I.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Air Conditioning",
+            "Mini Bar",
+            "Flat Screen TV"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "25 sqm"
+    },
+    {
+        "_id": "40ea9c75-4bd7-4fdf-8280-22e18a88208c",
+        "hotel_id": "afcb240f-5d7b-4748-8b94-9f28cde7f0b4",
+        "room_type": "Standard Room",
+        "price_per_night": 354,
+        "availability": true,
+        "description": "Thing give call interesting some.",
+        "bed_type": "King Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Jacuzzi",
+            "Air Conditioning",
+            "Mini Bar"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Available",
+        "size": "53 sqm"
+    },
+    {
+        "_id": "e45c2ca3-a8c9-47fe-8bbd-18e5a07c7190",
+        "hotel_id": "ea5adf95-8fda-422d-b553-c0829180c6a9",
+        "room_type": "Suite",
+        "price_per_night": 142,
+        "availability": false,
+        "description": "Rich explain its deal term much suffer.",
+        "bed_type": "King Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Jacuzzi",
+            "Flat Screen TV",
+            "Mini Bar"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "23 sqm"
+    },
+    {
+        "_id": "b744f0f4-48f8-47c2-acf9-2916e57ab2d7",
+        "hotel_id": "93d2ccd7-7412-449b-bd9c-92793c2229eb",
+        "room_type": "Deluxe Suite",
+        "price_per_night": 442,
+        "availability": false,
+        "description": "A situation wait design.",
+        "bed_type": "Double Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Air Conditioning",
+            "Flat Screen TV",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "29 sqm"
+    },
+    {
+        "_id": "749b2590-0d79-4e8c-be1c-2e04900d6ca4",
+        "hotel_id": "5f8089e9-516c-4d81-9d07-4a79e8ac06b3",
+        "room_type": "Standard Room",
+        "price_per_night": 214,
+        "availability": true,
+        "description": "Century whatever none.",
+        "bed_type": "King Bed",
+        "max_occupancy": 4,
+        "amenities": [
+            "Mini Bar",
+            "Jacuzzi",
+            "Air Conditioning"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Available",
+        "size": "36 sqm"
+    },
+    {
+        "_id": "d1145977-45e5-417f-b99b-52002e76256c",
+        "hotel_id": "ea5adf95-8fda-422d-b553-c0829180c6a9",
+        "room_type": "Suite",
+        "price_per_night": 240,
+        "availability": false,
+        "description": "His treatment unit nation show reality song.",
+        "bed_type": "King Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Mini Bar",
+            "Jacuzzi",
+            "Air Conditioning"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "37 sqm"
+    },
+    {
+        "_id": "12a64d46-8dd3-48d6-b6b1-b7ee26fbdd6a",
+        "hotel_id": "f3aa5d87-1edd-4e1f-933b-108850455910",
+        "room_type": "Deluxe Suite",
+        "price_per_night": 357,
+        "availability": true,
+        "description": "Learn yard for sport believe.",
+        "bed_type": "Double Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Air Conditioning",
+            "Flat Screen TV",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Available",
+        "size": "27 sqm"
+    },
+    {
+        "_id": "b0edb082-e244-4956-86e2-45f42a34e5fc",
+        "hotel_id": "5f8089e9-516c-4d81-9d07-4a79e8ac06b3",
+        "room_type": "Executive Room",
+        "price_per_night": 489,
+        "availability": false,
+        "description": "Network special list line yourself.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Air Conditioning",
+            "Flat Screen TV",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "37 sqm"
+    },
+    {
+        "_id": "9478ff3b-4024-4948-a621-af0d8eae6fd0",
+        "hotel_id": "75f9f594-2875-47db-af9f-e763ddfa2e42",
+        "room_type": "Standard Room",
+        "price_per_night": 495,
+        "availability": false,
+        "description": "Evening front billion.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Mini Bar",
+            "Flat Screen TV",
+            "Jacuzzi"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Available",
+        "size": "30 sqm"
+    },
+    {
+        "_id": "e6422e08-076c-44b0-87c1-b41927166e65",
+        "hotel_id": "afcb240f-5d7b-4748-8b94-9f28cde7f0b4",
+        "room_type": "Deluxe Suite",
+        "price_per_night": 162,
+        "availability": false,
+        "description": "Wind three simple type me reveal.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 2,
+        "amenities": [
+            "Jacuzzi",
+            "Balcony",
+            "Flat Screen TV"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "55 sqm"
+    },
+    {
+        "_id": "5f5b7f37-b0f4-4dbb-8453-b2faf091f614",
+        "hotel_id": "93d2ccd7-7412-449b-bd9c-92793c2229eb",
+        "room_type": "Standard Room",
+        "price_per_night": 189,
+        "availability": false,
+        "description": "Friend close treat scientist man black instead.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Air Conditioning",
+            "Flat Screen TV",
+            "Mini Bar"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "51 sqm"
+    },
+    {
+        "_id": "c56c75d1-3b3b-4d64-8131-9743cd88bbe9",
+        "hotel_id": "5f8089e9-516c-4d81-9d07-4a79e8ac06b3",
+        "room_type": "Suite",
+        "price_per_night": 294,
+        "availability": true,
+        "description": "Sometimes read impact.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 2,
+        "amenities": [
+            "Jacuzzi",
+            "Air Conditioning",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Available",
+        "size": "21 sqm"
+    },
+    {
+        "_id": "522fb07c-78bc-4785-a802-c282c27584b6",
+        "hotel_id": "86cf2412-fc07-475d-83a3-834562a5df83",
+        "room_type": "Executive Room",
+        "price_per_night": 430,
+        "availability": true,
+        "description": "Red they dark shake avoid fall situation.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 2,
+        "amenities": [
+            "Flat Screen TV",
+            "Jacuzzi",
+            "Mini Bar"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "24 sqm"
+    },
+    {
+        "_id": "e7a0e02c-4bc8-488a-acb9-14a3278b0c9e",
+        "hotel_id": "5f8089e9-516c-4d81-9d07-4a79e8ac06b3",
+        "room_type": "Deluxe Suite",
+        "price_per_night": 295,
+        "availability": false,
+        "description": "When level although.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 2,
+        "amenities": [
+            "Mini Bar",
+            "Flat Screen TV",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "40 sqm"
+    },
+    {
+        "_id": "69f0253e-bd30-4ac5-89ee-aa6365165b3e",
+        "hotel_id": "5f8089e9-516c-4d81-9d07-4a79e8ac06b3",
+        "room_type": "Deluxe Suite",
+        "price_per_night": 320,
+        "availability": false,
+        "description": "Enter film suffer movement direction black.",
+        "bed_type": "King Bed",
+        "max_occupancy": 4,
+        "amenities": [
+            "Air Conditioning",
+            "Mini Bar",
+            "Jacuzzi"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "49 sqm"
+    },
+    {
+        "_id": "fdf2cbd1-ac5e-4d57-8530-5f8ffe0221c0",
+        "hotel_id": "93d2ccd7-7412-449b-bd9c-92793c2229eb",
+        "room_type": "Executive Room",
+        "price_per_night": 423,
+        "availability": true,
+        "description": "There name huge treat second.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 4,
+        "amenities": [
+            "Balcony",
+            "Mini Bar",
+            "Jacuzzi"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "51 sqm"
+    },
+    {
+        "_id": "7f6c09d7-3a51-433b-8ae1-5d9ba36944a6",
+        "hotel_id": "f3aa5d87-1edd-4e1f-933b-108850455910",
+        "room_type": "Executive Room",
+        "price_per_night": 419,
+        "availability": true,
+        "description": "Low service anyone she heart.",
+        "bed_type": "Single Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Flat Screen TV",
+            "Balcony",
+            "Jacuzzi"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Booked",
+        "size": "43 sqm"
+    },
+    {
+        "_id": "c3770fd8-fa5b-4d05-8461-b5a4d7550bea",
+        "hotel_id": "5b867a0a-93a7-4846-ab49-e060110cf996",
+        "room_type": "Suite",
+        "price_per_night": 315,
+        "availability": true,
+        "description": "Case rule role worry rich which behavior.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 1,
+        "amenities": [
+            "Flat Screen TV",
+            "Jacuzzi",
+            "Balcony"
+        ],
+        "images": [
+            "room1.jpg",
+            "room2.jpg"
+        ],
+        "status": "Under Maintenance",
+        "size": "28 sqm"
+    }
+]

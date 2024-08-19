@@ -1,0 +1,184 @@
+[
+    {
+        "_id": "64e3d6f9f29d0b10dce07b1a",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1a",
+        "room_type": "Deluxe Suite",
+        "price_per_night": 350,
+        "availability": true,
+        "description": "Spacious suite with ocean views and a private balcony.",
+        "bed_type": "King Bed",
+        "max_occupancy": 4,
+        "amenities": ["Mini Bar", "Flat Screen TV", "Jacuzzi"],
+        "images": ["deluxe_suite1.jpg", "deluxe_suite2.jpg"],
+        "status": "Available",
+        "size": "45 sqm"
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07b1b",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1b",
+        "room_type": "Standard Room",
+        "price_per_night": 150,
+        "availability": false,
+        "description": "Cozy room with all the basic amenities.",
+        "bed_type": "Queen Bed",
+        "max_occupancy": 2,
+        "amenities": ["Free Wi-Fi", "Flat Screen TV"],
+        "images": ["standard_room1.jpg", "standard_room2.jpg"],
+        "status": "Booked",
+        "size": "25 sqm"
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07b1c",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1c",
+        "room_type": "Penthouse Suite",
+        "price_per_night": 500,
+        "availability": true,
+        "description": "Luxurious suite with panoramic city views and private terrace.",
+        "bed_type": "King Bed",
+        "max_occupancy": 6,
+        "amenities": ["Mini Bar", "Flat Screen TV", "Private Terrace"],
+        "images": ["penthouse1.jpg", "penthouse2.jpg"],
+        "status": "Available",
+        "size": "85 sqm"
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b1",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1a",
+        "room_number": "101",
+        "type": "Deluxe Suite",
+        "price_per_night": 300,
+        "bed_type": "King",
+        "capacity": 2,
+        "amenities": ["Ocean View", "Mini Bar", "Balcony"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": true},
+            {"date": "2024-08-21", "is_available": false}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b2",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1b",
+        "room_number": "202",
+        "type": "Mountain View Room",
+        "price_per_night": 350,
+        "bed_type": "Queen",
+        "capacity": 2,
+        "amenities": ["Mountain View", "Fireplace", "Private Balcony"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": true},
+            {"date": "2024-08-21", "is_available": true}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b3",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1c",
+        "room_number": "303",
+        "type": "City View Room",
+        "price_per_night": 190,
+        "bed_type": "Double",
+        "capacity": 2,
+        "amenities": ["City View", "Work Desk", "Complimentary Breakfast"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": false},
+            {"date": "2024-08-21", "is_available": true}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b4",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1d",
+        "room_number": "404",
+        "type": "Desert View Room",
+        "price_per_night": 260,
+        "bed_type": "King",
+        "capacity": 2,
+        "amenities": ["Desert View", "Private Patio", "Mini Bar"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": true},
+            {"date": "2024-08-21", "is_available": false}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b5",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1e",
+        "room_number": "505",
+        "type": "Lake View Room",
+        "price_per_night": 270,
+        "bed_type": "Queen",
+        "capacity": 2,
+        "amenities": ["Lake View", "Private Balcony", "Fireplace"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": true},
+            {"date": "2024-08-21", "is_available": true}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b6",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1f",
+        "room_number": "606",
+        "type": "Urban Suite",
+        "price_per_night": 230,
+        "bed_type": "King",
+        "capacity": 2,
+        "amenities": ["City View", "Work Desk", "Mini Bar"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": false},
+            {"date": "2024-08-21", "is_available": true}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b7",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1g",
+        "room_number": "707",
+        "type": "Beachside Room",
+        "price_per_night": 200,
+        "bed_type": "Queen",
+        "capacity": 2,
+        "amenities": ["Beach View", "Private Patio", "Complimentary Breakfast"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": true},
+            {"date": "2024-08-21", "is_available": false}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b8",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1h",
+        "room_number": "808",
+        "type": "Forest Cabin",
+        "price_per_night": 250,
+        "bed_type": "King",
+        "capacity": 2,
+        "amenities": ["Forest View", "Fireplace", "Private Deck"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": false},
+            {"date": "2024-08-21", "is_available": true}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2b9",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1i",
+        "room_number": "909",
+        "type": "Budget Room",
+        "price_per_night": 160,
+        "bed_type": "Double",
+        "capacity": 2,
+        "amenities": ["City View", "Complimentary Breakfast", "Work Desk"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": true},
+            {"date": "2024-08-21", "is_available": false}
+        ]
+    },
+    {
+        "_id": "64e3d7f8a2f8b309d4f7a2ba",
+        "hotel_id": "64e3d6f9f29d0b10dce07a1j",
+        "room_number": "1010",
+        "type": "Oceanfront Suite",
+        "price_per_night": 450,
+        "bed_type": "King",
+        "capacity": 4,
+        "amenities": ["Ocean View", "Private Balcony", "Mini Bar"],
+        "availability": [
+            {"date": "2024-08-20", "is_available": true},
+            {"date": "2024-08-21", "is_available": true}
+        ]
+    }
+]

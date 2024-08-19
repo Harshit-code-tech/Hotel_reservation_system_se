@@ -1,0 +1,366 @@
+[
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1a",
+        "name": "Ocean View Hotel",
+        "location": "Miami, FL",
+        "rating": 4.5,
+        "description": "A luxurious hotel with stunning ocean views and modern amenities.",
+        "price_per_night": 250,
+        "amenities": ["Free Wi-Fi", "Pool", "Spa", "Gym"],
+        "contact_info": {
+            "phone": "+1 305-555-1234",
+            "email": "info@oceanviewhotel.com",
+            "website": "www.oceanviewhotel.com"
+        },
+        "images": ["oceanview1.jpg", "oceanview2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "John Doe",
+                "rating": 4.7,
+                "comment": "Great stay, very comfortable!"
+            }
+        ],
+        "policies": {
+            "check_in": "3:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 10
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1b",
+        "name": "Mountain Escape Resort",
+        "location": "Aspen, CO",
+        "rating": 4.8,
+        "description": "A serene mountain resort offering breathtaking views and cozy accommodations.",
+        "price_per_night": 320,
+        "amenities": ["Free Wi-Fi", "Ski-In/Ski-Out", "Spa", "Fireplace"],
+        "contact_info": {
+            "phone": "+1 970-555-5678",
+            "email": "info@mountainescape.com",
+            "website": "www.mountainescape.com"
+        },
+        "images": ["mountainescape1.jpg", "mountainescape2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Jane Smith",
+                "rating": 4.9,
+                "comment": "A wonderful escape with fantastic amenities."
+            }
+        ],
+        "policies": {
+            "check_in": "4:00 PM",
+            "check_out": "12:00 PM",
+            "cancellation": "Free cancellation up to 48 hours before check-in."
+        },
+        "available_rooms": 5
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1c",
+        "name": "City Lights Hotel",
+        "location": "New York, NY",
+        "rating": 4.2,
+        "description": "A modern hotel located in the heart of the city, perfect for business and leisure travelers.",
+        "price_per_night": 180,
+        "amenities": ["Free Wi-Fi", "Fitness Center", "Business Center"],
+        "contact_info": {
+            "phone": "+1 212-555-8765",
+            "email": "info@citylightshotel.com",
+            "website": "www.citylightshotel.com"
+        },
+        "images": ["citylights1.jpg", "citylights2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Alice Johnson",
+                "rating": 4.3,
+                "comment": "Convenient location with clean rooms."
+            }
+        ],
+        "policies": {
+            "check_in": "2:00 PM",
+            "check_out": "10:00 AM",
+            "cancellation": "Non-refundable after booking."
+        },
+        "available_rooms": 15
+    },
+        {
+        "_id": "64e3d6f9f29d0b10dce07a1a",
+        "name": "Ocean View Hotel",
+        "location": "Miami, FL",
+        "rating": 4.5,
+        "description": "A luxurious hotel with stunning ocean views and modern amenities.",
+        "price_per_night": 250,
+        "amenities": ["Free Wi-Fi", "Pool", "Spa", "Gym"],
+        "contact_info": {
+            "phone": "+1 305-555-1234",
+            "email": "info@oceanviewhotel.com",
+            "website": "www.oceanviewhotel.com"
+        },
+        "images": ["oceanview1.jpg", "oceanview2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "John Doe",
+                "rating": 4.7,
+                "comment": "Great stay, very comfortable!"
+            }
+        ],
+        "policies": {
+            "check_in": "3:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 10
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1b",
+        "name": "Mountain Escape Resort",
+        "location": "Aspen, CO",
+        "rating": 4.8,
+        "description": "A serene mountain resort offering breathtaking views and cozy accommodations.",
+        "price_per_night": 320,
+        "amenities": ["Free Wi-Fi", "Ski-In/Ski-Out", "Spa", "Fireplace"],
+        "contact_info": {
+            "phone": "+1 970-555-5678",
+            "email": "info@mountainescape.com",
+            "website": "www.mountainescape.com"
+        },
+        "images": ["mountainescape1.jpg", "mountainescape2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Jane Smith",
+                "rating": 4.9,
+                "comment": "A wonderful escape with fantastic amenities."
+            }
+        ],
+        "policies": {
+            "check_in": "4:00 PM",
+            "check_out": "12:00 PM",
+            "cancellation": "Free cancellation up to 48 hours before check-in."
+        },
+        "available_rooms": 5
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1c",
+        "name": "City Lights Hotel",
+        "location": "New York, NY",
+        "rating": 4.2,
+        "description": "A modern hotel located in the heart of the city, perfect for business and leisure travelers.",
+        "price_per_night": 180,
+        "amenities": ["Free Wi-Fi", "Fitness Center", "Business Center"],
+        "contact_info": {
+            "phone": "+1 212-555-8765",
+            "email": "info@citylightshotel.com",
+            "website": "www.citylightshotel.com"
+        },
+        "images": ["citylights1.jpg", "citylights2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Alice Johnson",
+                "rating": 4.3,
+                "comment": "Convenient location with clean rooms."
+            }
+        ],
+        "policies": {
+            "check_in": "2:00 PM",
+            "check_out": "10:00 AM",
+            "cancellation": "Non-refundable after booking."
+        },
+        "available_rooms": 15
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1d",
+        "name": "Desert Oasis Hotel",
+        "location": "Phoenix, AZ",
+        "rating": 4.6,
+        "description": "A desert retreat offering luxurious comfort and stunning sunset views.",
+        "price_per_night": 220,
+        "amenities": ["Free Wi-Fi", "Pool", "Spa", "Desert Tours"],
+        "contact_info": {
+            "phone": "+1 602-555-9876",
+            "email": "info@desertoasishotel.com",
+            "website": "www.desertoasishotel.com"
+        },
+        "images": ["desertoasis1.jpg", "desertoasis2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Michael Brown",
+                "rating": 4.8,
+                "comment": "A perfect escape from the city life."
+            }
+        ],
+        "policies": {
+            "check_in": "3:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 8
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1e",
+        "name": "Lakeside Inn",
+        "location": "Lake Tahoe, CA",
+        "rating": 4.7,
+        "description": "A cozy inn located by the serene Lake Tahoe, offering peace and relaxation.",
+        "price_per_night": 200,
+        "amenities": ["Free Wi-Fi", "Lake View", "Boat Rentals"],
+        "contact_info": {
+            "phone": "+1 530-555-4567",
+            "email": "info@lakesideinn.com",
+            "website": "www.lakesideinn.com"
+        },
+        "images": ["lakesideinn1.jpg", "lakesideinn2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Sara White",
+                "rating": 4.9,
+                "comment": "A wonderful place to unwind and enjoy nature."
+            }
+        ],
+        "policies": {
+            "check_in": "4:00 PM",
+            "check_out": "12:00 PM",
+            "cancellation": "Free cancellation up to 48 hours before check-in."
+        },
+        "available_rooms": 12
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1f",
+        "name": "Urban Retreat Hotel",
+        "location": "San Francisco, CA",
+        "rating": 4.3,
+        "description": "A contemporary hotel in the heart of the city, close to all major attractions.",
+        "price_per_night": 210,
+        "amenities": ["Free Wi-Fi", "Gym", "Business Center"],
+        "contact_info": {
+            "phone": "+1 415-555-7890",
+            "email": "info@urbanretreathotel.com",
+            "website": "www.urbanretreathotel.com"
+        },
+        "images": ["urbanretreat1.jpg", "urbanretreat2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Emma Green",
+                "rating": 4.5,
+                "comment": "Great location and very comfortable rooms."
+            }
+        ],
+        "policies": {
+            "check_in": "3:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Non-refundable after booking."
+        },
+        "available_rooms": 20
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1g",
+        "name": "Beachside Bungalow",
+        "location": "Santa Monica, CA",
+        "rating": 4.4,
+        "description": "A charming bungalow just steps away from the beach, perfect for a relaxing getaway.",
+        "price_per_night": 180,
+        "amenities": ["Free Wi-Fi", "Beach Access", "Private Patio"],
+        "contact_info": {
+            "phone": "+1 310-555-2345",
+            "email": "info@beachsidebungalow.com",
+            "website": "www.beachsidebungalow.com"
+        },
+        "images": ["beachside1.jpg", "beachside2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Chris Adams",
+                "rating": 4.6,
+                "comment": "A perfect place to enjoy the beach and relax."
+            }
+        ],
+        "policies": {
+            "check_in": "3:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 6
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1h",
+        "name": "Forest Haven Lodge",
+        "location": "Asheville, NC",
+        "rating": 4.9,
+        "description": "A peaceful lodge nestled in the mountains, offering a tranquil retreat in nature.",
+        "price_per_night": 230,
+        "amenities": ["Free Wi-Fi", "Hiking Trails", "Spa", "Fireplace"],
+        "contact_info": {
+            "phone": "+1 828-555-3456",
+            "email": "info@foresthavenlodge.com",
+            "website": "www.foresthavenlodge.com"
+        },
+        "images": ["foresthaven1.jpg", "foresthaven2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "David Clark",
+                "rating": 5.0,
+                "comment": "A perfect place to unwind and connect with nature."
+            }
+        ],
+        "policies": {
+            "check_in": "4:00 PM",
+            "check_out": "12:00 PM",
+            "cancellation": "Free cancellation up to 48 hours before check-in."
+        },
+        "available_rooms": 4
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1i",
+        "name": "City Center Inn",
+        "location": "Chicago, IL",
+        "rating": 4.0,
+        "description": "A budget-friendly hotel located in downtown Chicago, close to all major attractions.",
+        "price_per_night": 150,
+        "amenities": ["Free Wi-Fi", "Fitness Center", "Complimentary Breakfast"],
+        "contact_info": {
+            "phone": "+1 312-555-6789",
+            "email": "info@citycenterinn.com",
+            "website": "www.citycenterinn.com"
+        },
+        "images": ["citycenter1.jpg", "citycenter2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Linda Davis",
+                "rating": 4.1,
+                "comment": "Convenient and affordable stay in the city center."
+            }
+        ],
+        "policies": {
+            "check_in": "2:00 PM",
+            "check_out": "10:00 AM",
+            "cancellation": "Non-refundable after booking."
+        },
+        "available_rooms": 25
+    },
+    {
+        "_id": "64e3d6f9f29d0b10dce07a1j",
+        "name": "Island Paradise Resort",
+        "location": "Honolulu, HI",
+        "rating": 4.9,
+        "description": "A tropical resort offering luxurious accommodations and stunning ocean views.",
+        "price_per_night": 400,
+        "amenities": ["Free Wi-Fi", "Beach Access", "Spa", "Outdoor Pool"],
+        "contact_info": {
+            "phone": "+1 808-555-1234",
+            "email": "info@islandparadiseresort.com",
+            "website": "www.islandparadiseresort.com"
+        },
+        "images": ["islandparadise1.jpg", "islandparadise2.jpg"],
+        "reviews": [
+            {
+                "reviewer_name": "Nancy Wilson",
+                "rating": 5.0,
+                "comment": "A dream vacation spot with top-notch service."
+            }
+        ],
+        "policies": {
+            "check_in": "3:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 7
+    }
+]

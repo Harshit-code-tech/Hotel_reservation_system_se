@@ -161,7 +161,16 @@ def logout():
 def index():
     try:
         db = current_app.db
-        hotels = db.hotels.find()
+        location = request.args.get('location', None)
+        min_rating = request.args.get('min_rating', None)
+
+        query = {}
+        if location:
+            query['location'] = {"$regex": location, "$options": "i"}  # Case-insensitive search
+        if min_rating:
+            query['rating'] = {"$gte": float(min_rating)}  # Filter by minimum rating
+
+        hotels = db.hotels.find(query)
         return render_template('hotel_list.html', hotels=hotels)
     except Exception as e:
         flash(f"An error occurred: {str(e)}", 'danger')
@@ -177,7 +186,7 @@ def get_hotel(hotel_id):
             flash('Hotel not found.', 'warning')
             return redirect(url_for('routes.index'))
 
-        rooms = db.rooms.find({"hotel_id": hotel_id})
+        rooms = db.rooms.find({"hotel_id": ObjectId(hotel_id)})
         return render_template('hotel_details.html', hotel=hotel, rooms=rooms)
     except Exception as e:
         flash(f"An error occurred: {str(e)}", 'danger')
@@ -194,7 +203,16 @@ def add_reservation():
                 return jsonify({"error": f"{field} is required"}), 400
 
         db = current_app.db
+        room = db.rooms.find_one({"_id": ObjectId(data['room_id'])})
+
+        if not room or room.get('status') != "Available":
+            return jsonify({"error": "Room not available"}), 400
+
+        # Optionally update room status to 'Booked'
+        db.rooms.update_one({"_id": ObjectId(data['room_id'])}, {"$set": {"status": "Booked"}})
+
         db.reservations.insert_one(data)
         return jsonify({"message": "Reservation added successfully"}), 201
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+

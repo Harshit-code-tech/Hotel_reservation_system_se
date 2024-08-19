@@ -1,0 +1,452 @@
+[
+    {
+        "_id": "93d2ccd7-7412-449b-bd9c-92793c2229eb",
+        "name": "Davidson, Chaney and Sanchez",
+        "location": "Gregoryfurt, WV",
+        "rating": 4.1,
+        "description": "Relate value have appear green. My force former six commercial catch star.",
+        "price_per_night": 181,
+        "amenities": [
+            "Spa",
+            "Gym",
+            "Pool"
+        ],
+        "contact_info": {
+            "phone": "(553)625-7898x320",
+            "email": "yodermaria@example.com",
+            "website": "http://roberts-larson.org/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Charlotte Mcdaniel",
+                "rating": 2.5,
+                "comment": "Although push usually cut authority."
+            },
+            {
+                "reviewer_name": "Carlos Shepherd",
+                "rating": 4.9,
+                "comment": "Read most foot measure."
+            }
+        ],
+        "policies": {
+            "check_in": "15:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 7
+    },
+    {
+        "_id": "5f8089e9-516c-4d81-9d07-4a79e8ac06b3",
+        "name": "Bean, Williams and Miranda",
+        "location": "Mullenburgh, PR",
+        "rating": 4.7,
+        "description": "Water control her sell.",
+        "price_per_night": 497,
+        "amenities": [
+            "Pool",
+            "Spa",
+            "Free Wi-Fi"
+        ],
+        "contact_info": {
+            "phone": "001-352-450-1140x57901",
+            "email": "lucastodd@example.org",
+            "website": "https://anderson-logan.com/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Cody Taylor",
+                "rating": 2.0,
+                "comment": "Lawyer herself same guess."
+            },
+            {
+                "reviewer_name": "Tammy Sims",
+                "rating": 4.1,
+                "comment": "Travel compare allow age computer stay writer fast."
+            },
+            {
+                "reviewer_name": "Elizabeth Parks",
+                "rating": 3.7,
+                "comment": "Modern side nearly."
+            },
+            {
+                "reviewer_name": "Katrina Adams",
+                "rating": 2.5,
+                "comment": "House challenge bad face early."
+            }
+        ],
+        "policies": {
+            "check_in": "14:00 PM",
+            "check_out": "10:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 13
+    },
+    {
+        "_id": "86cf2412-fc07-475d-83a3-834562a5df83",
+        "name": "Campbell Ltd",
+        "location": "South Amanda, SC",
+        "rating": 3.6,
+        "description": "Event relationship state only whether movement. Gun pay arrive everybody thought improve including.",
+        "price_per_night": 461,
+        "amenities": [
+            "Bar",
+            "Free Wi-Fi",
+            "Pool"
+        ],
+        "contact_info": {
+            "phone": "346-824-1908",
+            "email": "hhiggins@example.org",
+            "website": "https://www.mora.com/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Stephen Serrano",
+                "rating": 1.7,
+                "comment": "Lawyer worry sell wear radio."
+            },
+            {
+                "reviewer_name": "Rachel Davis",
+                "rating": 4.1,
+                "comment": "Space court I technology."
+            },
+            {
+                "reviewer_name": "Taylor Terry",
+                "rating": 1.2,
+                "comment": "Expect inside available wind."
+            }
+        ],
+        "policies": {
+            "check_in": "15:00 PM",
+            "check_out": "12:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 16
+    },
+    {
+        "_id": "75f9f594-2875-47db-af9f-e763ddfa2e42",
+        "name": "Turner, Clark and Bond",
+        "location": "Christianmouth, NJ",
+        "rating": 2.2,
+        "description": "Government in hospital kitchen.",
+        "price_per_night": 443,
+        "amenities": [
+            "Restaurant",
+            "Gym",
+            "Bar"
+        ],
+        "contact_info": {
+            "phone": "+1-548-282-7466",
+            "email": "howellkeith@example.org",
+            "website": "http://jones-thomas.com/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Tyler Brown",
+                "rating": 1.0,
+                "comment": "Leader artist down popular middle bill standard."
+            },
+            {
+                "reviewer_name": "Rachel Jacobs",
+                "rating": 2.5,
+                "comment": "Check police she community either drop."
+            },
+            {
+                "reviewer_name": "Carrie Banks",
+                "rating": 2.0,
+                "comment": "Market coach anything board product economic usually."
+            },
+            {
+                "reviewer_name": "Sheila Gomez",
+                "rating": 2.3,
+                "comment": "May result son through majority."
+            }
+        ],
+        "policies": {
+            "check_in": "12:00 PM",
+            "check_out": "10:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 7
+    },
+    {
+        "_id": "5b867a0a-93a7-4846-ab49-e060110cf996",
+        "name": "Klein-Smith",
+        "location": "Ebonyshire, NM",
+        "rating": 2.6,
+        "description": "Learn thousand magazine moment ahead officer mind.",
+        "price_per_night": 461,
+        "amenities": [
+            "Bar",
+            "Pool",
+            "Spa"
+        ],
+        "contact_info": {
+            "phone": "001-685-245-3720",
+            "email": "diazkaitlyn@example.com",
+            "website": "http://www.brown-cherry.com/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Christopher Stevens",
+                "rating": 2.2,
+                "comment": "Author focus serious."
+            },
+            {
+                "reviewer_name": "Matthew Bradley",
+                "rating": 1.2,
+                "comment": "Even nation pick thing necessary leg."
+            },
+            {
+                "reviewer_name": "Christopher Anderson",
+                "rating": 2.5,
+                "comment": "Last popular section find."
+            },
+            {
+                "reviewer_name": "Ryan Johnson",
+                "rating": 3.6,
+                "comment": "Air much between act particularly station investment."
+            },
+            {
+                "reviewer_name": "Chelsea Romero",
+                "rating": 3.6,
+                "comment": "Model article letter sound."
+            }
+        ],
+        "policies": {
+            "check_in": "14:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 29
+    },
+    {
+        "_id": "ea5adf95-8fda-422d-b553-c0829180c6a9",
+        "name": "Fischer-Silva",
+        "location": "Port Douglasland, IL",
+        "rating": 3.6,
+        "description": "Look impact interview good expert determine letter. Mrs modern marriage see produce field.",
+        "price_per_night": 244,
+        "amenities": [
+            "Bar",
+            "Gym",
+            "Free Wi-Fi"
+        ],
+        "contact_info": {
+            "phone": "(436)676-4461x49193",
+            "email": "kelseysoto@example.org",
+            "website": "http://www.miller.com/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Eric Fox",
+                "rating": 2.3,
+                "comment": "Wall parent politics born lead second."
+            }
+        ],
+        "policies": {
+            "check_in": "12:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 10
+    },
+    {
+        "_id": "afcb240f-5d7b-4748-8b94-9f28cde7f0b4",
+        "name": "White-West",
+        "location": "Amberstad, TN",
+        "rating": 2.2,
+        "description": "Floor PM consumer general moment yet. Director leader phone to against pretty order.",
+        "price_per_night": 324,
+        "amenities": [
+            "Free Wi-Fi",
+            "Gym",
+            "Pool"
+        ],
+        "contact_info": {
+            "phone": "654-963-6257x1321",
+            "email": "martinezadam@example.com",
+            "website": "http://green-curtis.com/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Kevin Baldwin",
+                "rating": 3.6,
+                "comment": "Receive feeling say."
+            },
+            {
+                "reviewer_name": "Juan Stephens",
+                "rating": 2.4,
+                "comment": "Here especially these or conference find box."
+            },
+            {
+                "reviewer_name": "Keith Anderson",
+                "rating": 2.4,
+                "comment": "Dark senior feel."
+            }
+        ],
+        "policies": {
+            "check_in": "13:00 PM",
+            "check_out": "10:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 5
+    },
+    {
+        "_id": "678c1411-184b-4c54-9675-1f15bb0fd4ab",
+        "name": "Sutton Group",
+        "location": "Lake Brandon, MT",
+        "rating": 1.2,
+        "description": "Enter probably choose effort best tell new.",
+        "price_per_night": 442,
+        "amenities": [
+            "Bar",
+            "Restaurant",
+            "Spa"
+        ],
+        "contact_info": {
+            "phone": "970-390-2597",
+            "email": "emilybraun@example.net",
+            "website": "https://spencer.com/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Laura Lewis",
+                "rating": 1.5,
+                "comment": "Quite including water increase pretty fire model."
+            },
+            {
+                "reviewer_name": "Patrick Bishop",
+                "rating": 3.1,
+                "comment": "On social use political it third medical."
+            }
+        ],
+        "policies": {
+            "check_in": "13:00 PM",
+            "check_out": "11:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 6
+    },
+    {
+        "_id": "751b5a84-916c-47ac-bc2c-96ccc9a9ee8b",
+        "name": "Stewart Group",
+        "location": "North Sarah, NV",
+        "rating": 2.2,
+        "description": "Action other actually firm computer remain should mean.",
+        "price_per_night": 354,
+        "amenities": [
+            "Spa",
+            "Pool",
+            "Bar"
+        ],
+        "contact_info": {
+            "phone": "001-854-778-9235x504",
+            "email": "emilymelendez@example.net",
+            "website": "https://evans.biz/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Carol George",
+                "rating": 4.9,
+                "comment": "Political along number sell language rate like."
+            },
+            {
+                "reviewer_name": "Jennifer Phillips",
+                "rating": 3.9,
+                "comment": "Foreign dark term service financial policy herself."
+            }
+        ],
+        "policies": {
+            "check_in": "12:00 PM",
+            "check_out": "12:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 18
+    },
+    {
+        "_id": "f3aa5d87-1edd-4e1f-933b-108850455910",
+        "name": "Cummings PLC",
+        "location": "New Paulbury, TX",
+        "rating": 2.7,
+        "description": "Well concern executive. Catch TV who federal.",
+        "price_per_night": 165,
+        "amenities": [
+            "Bar",
+            "Restaurant",
+            "Pool"
+        ],
+        "contact_info": {
+            "phone": "001-902-567-3117x4718",
+            "email": "lindsaycochran@example.org",
+            "website": "https://reyes-romero.com/"
+        },
+        "images": [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ],
+        "reviews": [
+            {
+                "reviewer_name": "Jennifer Jacobson",
+                "rating": 3.7,
+                "comment": "View realize new us attention prove course."
+            },
+            {
+                "reviewer_name": "Brittany Preston",
+                "rating": 1.7,
+                "comment": "Stop church local."
+            }
+        ],
+        "policies": {
+            "check_in": "15:00 PM",
+            "check_out": "10:00 AM",
+            "cancellation": "Free cancellation up to 24 hours before check-in."
+        },
+        "available_rooms": 13
+    }
+]
