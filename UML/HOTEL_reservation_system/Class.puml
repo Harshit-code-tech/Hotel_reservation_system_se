@@ -1,6 +1,5 @@
 @startuml
 class Hotel {
-  +hotel_id: Primary Key
   +Name
   +Location
   +Rooms_List
@@ -13,7 +12,6 @@ class Hotel {
 }
 
 class Room {
-  +room_id: Primary Key
   +Room_Number
   +Price_Per_Night
 
@@ -21,7 +19,6 @@ class Room {
 }
 
 class Customer {
-  +customer_id: Primary Key
   +Name
   +Email_Address
   +Phone_Number
@@ -35,7 +32,6 @@ class Customer {
 }
 
 class Reservation {
-  +reservation_id: Primary Key
   +Reserved_Room
   +Customer_Details
   +Reservation_Dates
@@ -48,7 +44,6 @@ class Reservation {
 }
 
 class Payment {
-  +payment_id: Primary Key
   +Amount paid
   +Date of payment
 
@@ -56,8 +51,6 @@ class Payment {
 }
 
 class Admin {
-  +admin_id: Primary Key
-
   +Payment Management()
   +Customer Account Management()
   +Login()
@@ -65,8 +58,6 @@ class Admin {
 }
 
 class Manager {
-  +manager_id: Primary Key
-
   +Reservation Handling()
   +Room Management()
   +Report Generation()
@@ -88,7 +79,6 @@ class DateRange {
 }
 
 class Report {
-  +report_id: Primary Key
   +Content
   +Generate_Report()
 }
@@ -99,21 +89,24 @@ enum ReservationStatus {
   Cancelled
 }
 
-Admin "1" -- "*" Hotel
-Hotel "1" -- "*" Room
-Customer "1" -- "*" Reservation
-Reservation "1" -- "1" Room
-Reservation "1" -- "1" Customer
-Reservation "1" -- "1" Payment
-Reservation "1" -- "1" DateRange
-Reservation "1" -- "1" ReservationStatus
-Admin -- Payment
-Admin -- Customer
-Manager "1" -- "*" Hotel
-Manager -- Reservation
-Manager -- Report
-Manager -- Customer
-Customer "1" -- "*" Payment
-Customer "1" -- "1" SearchCriteria
-Hotel "1" -- "1" SearchCriteria
+Admin --> Hotel
+Hotel --> Room
+Customer --> Reservation
+Reservation --> Room
+Reservation --> Customer
+Reservation --> Payment
+Reservation --> DateRange
+Reservation --> ReservationStatus
+Admin --> Payment
+Admin --> Customer
+Admin --> Manager
+Manager --> Hotel
+Manager --> Reservation
+Manager --> Report
+Manager --> Customer
+Manager --> Payment
+Customer --> Payment
+Customer --> SearchCriteria
+Customer --> Report
+Hotel --> SearchCriteria
 @enduml
