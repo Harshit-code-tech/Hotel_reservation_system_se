@@ -1,4 +1,6 @@
 @startuml
+left to right direction
+
 actor Customer
 actor Admin
 actor "Hotel Manager" as Manager
@@ -40,6 +42,7 @@ Manager --> UC11
 UC5 .> UC8 : <<include>>
 UC6 .> UC8 : <<include>>
 
-UC1 <|-- UC2 : <<extend>>
-UC2 <|-- UC3 : <<extend>>
+UC1 <|.- UC2 : <<extend>>
+UC2 <|.- UC3 : <<extend>>
+
 @enduml
