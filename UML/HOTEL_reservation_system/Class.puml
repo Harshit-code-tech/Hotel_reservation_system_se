@@ -4,18 +4,18 @@ class Hotel {
   +Location
   +Rooms_List
 
-  +Hotel Search()
-  +Reservation Creation()
-  +Room Addition()
-  +Room Removal()
-  +View_All_Reservations()
+  +hotelsearch()
+  +reservationcreation()
+  +roomaddition()
+  +roomremoval()
+  +view_all_reservations()
 }
 
 class Room {
   +Room_Number
   +Price_Per_Night
 
-  +Room Availability()
+  +roomavailability()
 }
 
 class Customer {
@@ -23,47 +23,47 @@ class Customer {
   +Email_Address
   +Phone_Number
 
-  +Account Registration()
-  +Account Login()
-  +Account Logout()
-  +Hotel Search()
-  +Reservation Creation()
-  +View_Booking_History()
+  +accountregistration()
+  +accountlogin()
+  +accountlogout()
+  +hotelsearch()
+  +reservationcreation()
+  +view_booking_history()
 }
 
 class Reservation {
   +Reserved_Room
   +Customer_Details
   +Reservation_Dates
-  +Reservation_Status(Pending, Confirmed, Cancelled)
 
-  +Payment Initiation()
-  +Reservation Cancellation()
-  +Check_Room_Availability(Room: Room, Dates: DateRange)
-  +View_Reservation_Details()
+  +reservation_Status(Pending, Confirmed, Cancelled)
+  +paymentinitiation()
+  +reservationcancellation()
+  +check_room_availability(Room: Room, Dates: DateRange)
+  +view_reservation_details()
 }
 
 class Payment {
   +Amount paid
   +Date of payment
 
-  +Payment Processing()
+  +paymentprocessing()
 }
 
 class Admin {
-  +Payment Management()
-  +Customer Account Management()
-  +Login()
-  +Logout()
+  +paymentmanagement()
+  +customeraccountmanagement()
+  +login()
+  +logout()
 }
 
 class Manager {
-  +Reservation Handling()
-  +Room Management()
-  +Report Generation()
-  +Complaint Handling()
-  +Notification Sending()
-  +Reservation Update()
+  +reservationhandling()
+  +roommanagement()
+  +reportgeneration()
+  +complainthandling()
+  +notificationsending()
+  +reservationupdate()
 }
 
 class SearchCriteria {
@@ -80,7 +80,7 @@ class DateRange {
 
 class Report {
   +Content
-  +Generate_Report()
+  +generate_report()
 }
 
 enum ReservationStatus {
