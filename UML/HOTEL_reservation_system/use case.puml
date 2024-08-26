@@ -8,7 +8,7 @@ actor "Hotel Manager" as Manager
 rectangle "Hotel Reservation System" {
 
   usecase "Register Account" as UC1
-  usecase "Login Account" as UC2
+  usecase "Login Account" as UC2 <<dotted>>
   usecase "Logout Account" as UC3
   usecase "Search Hotels" as UC4
   usecase "Make a Reservation" as UC5
@@ -42,7 +42,9 @@ Manager --> UC11
 UC5 .> UC8 : <<include>>
 UC6 .> UC8 : <<include>>
 
-UC1 <|.- UC2 : <<extend>>
-UC2 <|.- UC3 : <<extend>>
+UC1 <|.- UC2
+UC2 <|.- UC3
+
+
 
 @enduml
