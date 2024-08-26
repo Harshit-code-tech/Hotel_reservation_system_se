@@ -7,7 +7,7 @@
   - _Jyotika Jayani (Roll No. 22052987)_
 - **Members:**
   - _Harshit Ghosh (Roll No. 22052982)_
-  - _Shreya (Roll No. 22051024)_
+  - _Shreya Agarwal (Roll No. 22051024)_
 ## 1. Introduction
 
 ### 1.1 Purpose
