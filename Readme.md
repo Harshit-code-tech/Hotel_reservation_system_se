@@ -4,7 +4,7 @@
 ## Team Information
 
 - **Team Leader:** 
-_Jyotika Jayani (Roll No. 22052987)_
+  - _Jyotika Jayani (Roll No. 22052987)_
 - **Members:**
   - _Harshit Ghosh (Roll No. 22052982)_
   - _Shreya (Roll No. 22051024)_
@@ -164,15 +164,15 @@ The system does not require any specific hardware interfaces. It will be hosted 
 
 ### 7.1 Class Diagram
 The following class diagram from the UML model illustrates the relationships and attributes of the system’s components. This diagram provides a structural view of the Hotel Reservation System, showing the classes involved, their properties, methods, and how they interact with one another.
-![Class Diagram](./UML/Class.png)
+![Class Diagram](UML/Class.png)
 
 ### 7.2 Use Case Diagram
 The use case diagram below illustrates the interactions between users (actors) and the system. It identifies the primary use cases, such as searching for hotels, making reservations, and managing accounts, and shows how different actors, like customers, managers, and administrators, interact with these use cases.
-![Use Case Diagram](./UML/Use case diagram.jpeg)
+![Use Case Diagram](<UML/Sequence diagram.jpeg>)
 
 ### 7.3 Sequence Diagram
 The sequence diagram presents a dynamic view of the system by showing how objects interact in a particular scenario of a use case. It emphasizes the order of messages exchanged between objects during the execution of the process, such as during the reservation creation or payment processing.
-![Sequence Diagram](./UML/Sequence diagram.jpeg)
+![Sequence Diagram](<UML/Sequence diagram.jpeg>)
 
 ### 7.4 Glossary
 This glossary provides definitions for terms used throughout the Software Requirements Specification (SRS) document:
