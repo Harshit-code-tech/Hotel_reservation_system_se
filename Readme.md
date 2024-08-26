@@ -168,7 +168,8 @@ The following class diagram from the UML model illustrates the relationships and
 
 ### 7.2 Use Case Diagram
 The use case diagram below illustrates the interactions between users (actors) and the system. It identifies the primary use cases, such as searching for hotels, making reservations, and managing accounts, and shows how different actors, like customers, managers, and administrators, interact with these use cases.
-![Use Case Diagram](<UML/Sequence diagram.jpeg>)
+![Use Case Diagram](<UML/Use case diagram.jpeg>)
+
 
 ### 7.3 Sequence Diagram
 The sequence diagram presents a dynamic view of the system by showing how objects interact in a particular scenario of a use case. It emphasizes the order of messages exchanged between objects during the execution of the process, such as during the reservation creation or payment processing.
