@@ -9,11 +9,6 @@
         ├── js/
             ├── background-effects.js
             ├── script.js
-    ├── __pycache__/
-        ├── routes.cpython-312.pyc
-        ├── config.cpython-312.pyc
-        ├── app.cpython-312.pyc
-        ├── models.cpython-312.pyc
     ├── templates/
         ├── hotel_details.html
         ├── base.html

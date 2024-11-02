@@ -92,47 +92,37 @@ def reset_password(token):
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        data = request.form
+        # Check if JSON or form data is used
+        data = request.get_json() or request.form
         db = current_app.db
         user = db.users.find_one({'email': data['email']})
+
         if user and check_password_hash(user['password'], data['password']):
             session['user_id'] = str(user['_id'])
             session['user_name'] = user['name']
-            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
-                return jsonify({'success': True, 'redirect': url_for('routes.index')})
-            else:
-                return redirect(url_for('routes.index'))
+            return jsonify({'success': True, 'redirect': url_for('routes.index')})
         else:
-            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
-                return jsonify({'success': False, 'message': 'Invalid credentials. Please try again.'})
-            else:
-                flash('Invalid credentials. Please try again.', 'danger')
-                return render_template('login.html')
+            return jsonify({'success': False, 'message': 'Invalid credentials. Please try again.'})
     return render_template('login.html')
 
 
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        data = request.form
+        data = request.json
         db = current_app.db
+
+        # Check for existing user
         existing_user = db.users.find_one({'email': data['email']})
-        password_error = validate_password(data['password'])
-
         if existing_user:
-            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
-                return jsonify({'success': False, 'message': 'User already exists with this email.'})
-            else:
-                flash('User already exists with this email.', 'danger')
-                return render_template('register.html')
+            return jsonify({'success': False, 'message': 'User already exists with this email.'}), 400
 
+        # Validate password
+        password_error = validate_password(data['password'])
         if password_error:
-            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
-                return jsonify({'success': False, 'message': password_error})
-            else:
-                flash(password_error, 'danger')
-                return render_template('register.html')
+            return jsonify({'success': False, 'message': password_error}), 400
 
+        # Hash password and insert new user
         hashed_password = generate_password_hash(data['password'])
         db.users.insert_one({
             'name': data['name'],
@@ -140,13 +130,11 @@ def register():
             'password': hashed_password
         })
 
-        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # Check if request is AJAX
-            return jsonify({'success': True, 'redirect': url_for('routes.login')})
-        else:
-            flash('Registration successful! You can now log in.', 'success')
-            return redirect(url_for('routes.login'))
+        return jsonify({'success': True, 'redirect': url_for('routes.login')})
 
     return render_template('register.html')
+
+
 
 
 @bp.route('/logout')
@@ -215,4 +203,3 @@ def add_reservation():
         return jsonify({"message": "Reservation added successfully"}), 201
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
